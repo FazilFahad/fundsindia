@@ -1,0 +1,1695 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+body {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "Avenir Next W01", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-lock:before {
+    content: "\f023";
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.fa-user:before {
+    content: "\f007";
+}
+
+.fa-envelope-o:before {
+    content: "\f003";
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   Author's default styles
+   ========================================================================== */
+
+a:hover,
+a:active,
+a:focus,
+a:active:focus,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: black;
+    font-family: "Avenir Next W01", Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+h3 {
+    color: black;
+    font-family: "Avenir Next W01", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h4 {
+    color: #535b62;
+    font-family: "Avenir Next W01", Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h5 {
+    color: #0074bf;
+    font-family: "Avenir Next W01", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+blockquote::after {
+    background-color: red;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    width: 125px;
+}
+
+blockquote {
+    border-left: medium none;
+    color: #fc5441;
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 80%;
+}
+
+ul.list-style li {
+    list-style: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-padding-top {
+    padding-top: 0;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-margin-left {
+    margin-left: 0;
+}
+
+.no-margin-right {
+    margin-right: 0;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-border {
+    border: 0 none;
+}
+
+.no-border-radius {
+    border-radius: 0;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.section-control {
+    display: table;
+    width: 100%;
+}
+
+.cover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.vertical-center {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.horizontal-center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.center-center {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+}
+
+.transition {
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.navbar-toggle.collapsed .top-bar {
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggle.collapsed .bottom-bar {
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.icon-bar {
+    width: 22px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.top-bar {
+    margin-left: 3px;
+    margin-right: 3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 10% 10% 0;
+    transform-origin: 10% 10% 0;
+}
+
+.middle-bar {
+    opacity: 0;
+}
+
+.bottom-bar {
+    margin-left: 3px;
+    margin-right: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 10% 90% 0;
+    transform-origin: 10% 90% 0;
+}
+
+.header--fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.headroom {
+    -webkit-transition: -webkit-transform 200ms linear;
+    transition: -webkit-transform 200ms linear;
+    transition: transform 200ms linear;
+    transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.headroom--pinned {
+    -webkit-transform: translateY(-0%);
+    transform: translateY(-0%);
+}
+
+.headroom--unpinned {
+    -webkit-transform: translateY(-180%);
+    transform: translateY(-180%);
+}
+
+.btn {
+    font-weight: 700;
+    font-family: "Avenir Next W01", Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+}
+
+.btn-large {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.btn-medium {
+    font-size: 15px;
+}
+
+.btn-success {
+    background-color: #00b050;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #14A929;
+    color: white;
+}
+
+.btn-success:active:focus,
+.btn-success:focus,
+.btn-success:active,
+.btn-success:active:hover,
+.btn-success:active.focus,
+.btn-success.active:hover,
+.btn-success.active:focus,
+.btn-success.active.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    background-color: #14A929;
+    color: white;
+}
+
+.normal-form .nl-form button.btn-primary,
+.btn-primary {
+    background-color: #0554a1 !important;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #04498c;
+    color: white;
+}
+
+.btn-primary:active:focus,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    background-color: #04498c;
+    color: white;
+}
+
+.btn-default {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-default:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-default:active:focus,
+.btn-default:focus,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active.focus,
+.btn-default.active:hover,
+.btn-default.active:focus,
+.btn-default.active.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-filled {
+    background-color: white;
+    color: #00b050;
+    border: 2px solid white;
+}
+
+.btn-filled:hover {
+    background-color: white;
+    color: #00b050;
+    border: 2px solid white;
+}
+
+.btn-filled:active:focus,
+.btn-filled:focus,
+.btn-filled:active,
+.btn-filled:active:hover,
+.btn-filled:active.focus,
+.btn-filled.active:hover,
+.btn-filled.active:focus,
+.btn-filled.active.focus {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    background-color: white;
+    color: #00b050;
+    border: 2px solid white;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lead {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 15px;
+    letter-spacing: -.02em;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.section-space {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.section-space-small {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/*Header*/
+
+header {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1.7px 21px rgba(56, 56, 56, 0.1);
+}
+
+.navbar-nav>li>a {
+    padding: 0;
+    color: #666;
+    font-size: 15px;
+    // font-weight: 700;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: transparent;
+}
+
+.navbar-nav {
+    margin-left: 6.875rem;
+    margin-top: 10px;
+}
+
+.navbar-nav li {
+    margin-right: 40px;
+}
+
+.navbar-nav li:last-child {
+    margin-right: 0;
+}
+
+.navbar {
+    min-height: 40px;
+}
+
+.navbar-header h1 {
+    margin-left: 60px;
+}
+
+.navbar-header h1,
+.navbar-brand {
+    width: 188px;
+    height: 21px;
+}
+
+.navbar-brand {
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/logo.png");
+    background-repeat: no-repeat;
+    margin: 8px 0 0 0;
+}
+
+.primary-nav {
+    float: left;
+}
+
+.signup-btn,
+.phone-chat {
+    float: right;
+}
+
+.phone-chat {
+    margin-top: 8px;
+}
+
+.phone-chat li {
+    margin-right: 40px;
+    position: relative;
+    min-height: 24px;
+    padding-left: 34px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.phone-chat li a {
+    margin-top: 5px;
+    display: block;
+    color: #0554a1;
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
+.phone-icon {
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-phone.svg");
+    font-size: 13px;
+}
+
+.chat-icon {
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-chat.svg");
+    font-size: 15px;
+}
+
+.signup-btn {
+    margin-right: 60px;
+    padding: 8px 22px;
+    margin-top: 2px;
+}
+
+.navbar-nav a::before {
+    content: '';
+    height: 2px;
+    background: #0554a1;
+    position: absolute;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    bottom: 0;
+}
+
+.navbar-nav a:hover::before {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.head-top {
+    margin-top: 80px;
+}
+
+.scroll-down {
+    fill: #fff;
+    opacity: 0.6;
+    fill-rule: evenodd;
+}
+
+.click-me {
+    position: absolute;
+    bottom: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+/*hero-section*/
+
+.hero-section {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background: url("http://dev.timeless.co/image-path/fundsindia/bg-hero-banner.jpg");
+    background-size: cover;
+}
+
+.normal-form,
+.natural-form {
+    max-width: 520px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.normal-form,
+.mutual-funds-inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.normal-form .btn-primary,
+.natural-form .btn-primary {
+    color: white;
+    font-size: 1.4375rem;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 40px;
+}
+
+.normal-form .input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-family: "Avenir Next W01", Helvetica, sans-serif;
+}
+
+.normal-form .input:last-child {
+    margin-bottom: 0;
+}
+
+.normal-form .input span {
+    position: absolute;
+    display: block;
+    color: #d4d4d4;
+    left: 10px;
+    top: 8px;
+    font-size: 20px;
+}
+
+.normal-form .input input {
+    width: 100%;
+    padding: 13px 5px 13px 40px;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: 0.2s ease-out;
+    color: #a1a1a1;
+}
+
+.normal-form .input input:focus {
+    padding: 13px 5px 13px 10px;
+    outline: 0;
+    border: 1px solid #0554a1;
+}
+
+.normal-form fieldset {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-arrow {
+    fill: #fff;
+    fill-rule: evenodd;
+}
+
+.normal-form svg {
+    margin-left: 20px;
+}
+
+.natural-form h2,
+.natural-form p,
+.normal-form p,
+.normal-form h2 {
+    color: #0554a1;
+    text-align: center;
+}
+
+.natural-form p,
+.normal-form p {
+    font-size: 2.25rem;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.nl-form {
+    opacity: 0.9;
+    font-size: 1.375rem;
+    color: #32754f;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    line-height: 1.8;
+}
+
+.nl-field-toggle:hover,
+.nl-form input:hover,
+.nl-form select:hover,
+.nl-field-toggle:active,
+.nl-field-toggle:focus,
+.nl-field-toggle:focus:active,
+.nl-field-toggle:active:focus,
+.nl-field-toggle,
+.nl-form input,
+.nl-form select {
+    color: #184e2f;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 1px solid #184e2f;
+}
+
+.nl-ti-text ul li.nl-ti-input input {
+    width: 100%;
+    padding: 0 15px;
+    border-bottom: none;
+    color: #0554a1;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.nl-ti-text ul li.nl-ti-example em {
+    color: #0554a1;
+}
+
+.nl-field.nl-field-open ul {
+    background-color: white;
+    padding: 15px 0;
+}
+
+.nl-ti-text ul {
+    min-width: 18em;
+    padding: 0 !important;
+}
+
+.nl-ti-text ul li.nl-ti-input input::-webkit-input-placeholder,
+.nl-ti-text ul li.nl-ti-input input:-ms-input-placeholder,
+.nl-ti-text ul li.nl-ti-input input:-moz-placeholder,
+.nl-ti-text ul li.nl-ti-input input::-moz-placeholder {
+    color: #0554a1;
+}
+
+.nl-dd ul li.nl-dd-checked {
+    color: #0554a1;
+}
+
+.nl-dd ul li {
+    padding: 4px 20px !important;
+    margin-bottom: 0;
+    color: #0554a1;
+    font-size: 18px;
+}
+
+.no-touch .nl-dd ul li:hover {
+    background-color: transparent;
+}
+
+.nl-dd ul li:last-child {
+    margin-bottom: 0;
+}
+
+.nl-ti-text ul li.nl-ti-example {
+    font-size: 90%;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.nl-field ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.investingsedosti {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: .04em;
+}
+
+.help-btn {
+    background-color: #17c988;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    position: fixed;
+    bottom: 30px;
+    right: 60px;
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: .04em;
+    cursor: pointer;
+}
+
+.help-btn svg {
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+.help-icon {
+    fill: #fff;
+    fill-rule: evenodd;
+}
+
+.secure-signup-icon {
+    fill: #fff;
+    fill-rule: evenodd;
+}
+
+.secure-signup {
+    height: 15px;
+    color: white;
+    font-family: "Avenir Next LT Pro";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.secure-signup svg {
+    margin-top: -6px;
+}
+
+.login {
+    text-align: center;
+}
+
+
+/*Natural form*/
+
+.nl-form {
+    margin-top: 0;
+    height: 100%;
+}
+
+.natural-form {
+    height: 100%;
+}
+
+
+/*mutual-funds*/
+
+.mutual-funds {
+    width: 100%;
+    height: 100vh;
+    background: url("http://dev.timeless.co/image-path/fundsindia/bg-mutual.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.mutual-funds a {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.mutual-funds .btn-default {
+    margin-right: 0;
+}
+
+.mutual-funds span {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mutual-funds h2 {
+    color: white;
+    font-size: 2.25rem;
+    letter-spacing: -.04em;
+    margin-top: 15px;
+}
+
+.mutual-funds > .container {
+    height: 100%;
+}
+
+
+/*how-it-work*/
+
+.how-it-work .lead {
+    max-width: 410px;
+}
+
+.how-it-work h3 {
+    margin-top: 3.125rem;
+}
+
+.work-flow {
+    margin-top: 5rem;
+}
+
+.work-flow > span {
+    max-width: 35px;
+    height: 35px;
+    background-color: #17c988;
+    border-radius: 50%;
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.work-flow > span::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    width: 326px;
+    height: 2px;
+    opacity: 0.3;
+    background-color: #17c988;
+    left: 43px;
+}
+
+.work-flow:last-child > span::before {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.how-it-work figcaption p {
+    margin-top: 10px;
+}
+
+.work-flow figure {
+    margin-top: 2.375rem;
+}
+
+.signup figure {
+    max-width: 92px;
+}
+
+.invest figure {
+    max-width: 81px;
+}
+
+.track figure {
+    max-width: 90px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+
+/*why-fundsindia*/
+
+.why-fundsindia {
+    background-color: #f9f9f9;
+}
+
+.why-fundsindia .btn {
+    margin-top: 3.75rem;
+}
+
+.why-fundsindia .lead {
+    max-width: 730px;
+}
+
+.process {
+    margin-top: 6rem;
+}
+
+.process p {
+    margin-top: 30px;
+}
+
+.process figcaption > span {
+    color: #2e9de3;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.why-fundsindia h3 {
+    margin-top: 30px;
+}
+
+.process figure {
+    max-width: 64px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+/*getting-rich*/
+
+.getting-rich {
+    background: url("http://dev.timeless.co/image-path/fundsindia/bg-pattern.png") #3199ff;
+}
+
+.getting-rich p,
+.getting-rich h2 {
+    color: white;
+}
+
+.getting-rich h2 {
+    margin-bottom: 10px;
+}
+
+.getting-rich p {
+    margin-bottom: 20px;
+    max-width: 300px;
+    line-height: 1.2;
+}
+
+.getting-rich-content {
+    max-width: 660px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.getting-rich figure {
+    max-width: 181px;
+}
+
+
+/*testimonial-faq*/
+
+.testimonial-faq {
+    display: table;
+    width: 100%;
+}
+
+.testimonial {
+    background: url("http://dev.timeless.co/image-path/fundsindia/bg-testimonial.png") #28b380;
+    background-repeat: no-repeat;
+    background-position: left bottom -45px;
+}
+
+.testimonial figure {
+    max-width: 79px;
+    border-radius: 50%;
+}
+
+.testimonial-faq h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    color: white;
+}
+
+.testimonial-inner {
+    max-width: 570px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+}
+
+.testimonial-content {
+    border-radius: 5px;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.testimonial-content > p {
+    color: #666;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.testimonial-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-person p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.testimonial-person figcaption {
+    position: relative;
+    padding-left: 50px;
+}
+
+.testimonial-person figcaption::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-quote.svg");
+    width: 35px;
+    height: 30px;
+}
+
+.testimonial-person span {
+    color: #999;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.faq {
+    background: url("http://dev.timeless.co/image-path/fundsindia/bg-faq.png") #366fe5;
+    background-repeat: no-repeat;
+    background-position: right bottom -65px;
+}
+
+.faq ul {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.faq li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+    position: relative;
+    display: block;
+}
+
+.faq li a::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-plus.svg");
+    top: 2px;
+}
+
+.faq li {
+    margin-bottom: 20px;
+}
+
+.faq li:last-child {
+    margin-bottom: 0;
+}
+
+.faq-inner {
+    padding-left: 60px;
+    max-width: 420px;
+}
+
+.testimonial-success {
+    background-color: #f6f4e7;
+}
+
+.testimonial-success figure {
+    max-width: 225px;
+    float: right;
+    margin-top: 20px;
+}
+
+.testimonial-success figcaption {
+    float: left;
+    max-width: 665px;
+}
+
+.testimonial-indicators {
+    bottom: -33px;
+    max-width: 225px;
+    margin-right: 0;
+    margin-left: 0;
+    left: 100%;
+    transform: translateX(-96%);
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.testimonial-indicators li {
+    width: 9px;
+    height: 9px;
+    background-color: #ddd;
+    border-color: #ddd;
+    margin: 0;
+}
+
+.carousel-indicators .active {
+    width: 9px;
+    height: 9px;
+    margin: 0;
+    border-color: #666;
+    background-color: #666;
+}
+
+.testimonial-success figcaption span {
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.testimonial-success figcaption p {
+    color: black;
+    font-size: 1.375rem;
+    line-height: 1.3;
+    margin-top: 25px;
+}
+
+
+/*footer*/
+
+
+/*our-partners*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 110px;
+}
+
+.our-partners {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.partners-logo {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.partners-logo span {
+    color: #0554a1;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.partners-arrow {
+    fill: #45b3f8;
+    fill-rule: evenodd;
+}
+
+.partners-arrow-right {
+    transform: rotate(180deg)
+}
+
+
+/*footer-top*/
+
+.footer-top {
+    background-color: #f9f9f9;
+    padding-bottom: 3rem;
+}
+
+.col-one p {
+    color: #010101;
+    font-size: 15px;
+    line-height: 2;
+    margin-top: 25px;
+}
+
+.col-one a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 35px;
+}
+
+.footer-top ul {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.footer-top ul li a {
+    color: #666;
+    font-size: 13px;
+}
+
+.footer-top ul li {
+    margin-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.footer-top ul li:last-child {
+    margin-bottom: 0;
+}
+
+.col-two p,
+.col-three p {
+    color: #376092;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-top .list-inline {
+    margin-top: 20px;
+}
+
+.col-three .list-inline li:first-child {
+    padding-left: 0;
+}
+
+.col-three .list-inline li:last-child {
+    padding-right: 0;
+}
+
+.spacetop {
+    margin-top: 30px;
+}
+
+.col-one,
+.col-two,
+.col-three {
+    margin-top: 3rem;
+}
+
+
+/*from-blog*/
+
+.from-blog {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.from-blog figure {
+    max-width: 475px;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.from-blog figcaption {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+}
+
+.from-blog figcaption span {
+    color: #17c988;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    letter-spacing: .03em;
+}
+
+.from-blog figcaption h3 {
+    color: white;
+}
+
+.blog-overlay {
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/bg-blog.png");
+    background-size: cover;
+    opacity: .8;
+}
+
+.from-blog h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #0554a1;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    margin-top: 3rem;
+}
+
+.recent-articles span {
+    color: #adadad;
+    font-family: "Avenir Next LT Pro";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.recent-articles h4 {
+    color: #0554a1;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.recent-articles p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.single-article {
+    margin-bottom: 2.5rem;
+}
+
+.winner {
+    display: flex;
+    max-width: 980px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.winner img {
+    margin-top: 4rem;
+}
+
+
+/*blog*/
+
+.blog-hero {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #f9fdff;
+}
+
+.blog-page-title {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+.blog-hero h2 {
+    color: #0554a1;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.blog-hero p {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #0554a1;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.blog-hero span {
+    color: #00b050;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    padding-bottom: 20px;
+    letter-spacing: .03em;
+}
+
+.category-menu ul {
+    margin-bottom: 0;
+}
+
+
+/*footer-bottom*/
+
+.footer-bottom {
+    padding-top: 20px;
+}
+
+.footer-bottom a {
+    color: #376092;
+    font-size: 14px;
+    padding-left: 25px;
+    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-plus-blue.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.footer-accordion {
+    margin-bottom: 20px;
+}
+
+.footer-accordion small {
+    float: right;
+}
+
+.accordion-body p {
+    margin-top: 20px;
+    color: #010101;
+    font-size: 15px;
+    line-height: 2;
+}
