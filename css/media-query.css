@@ -108,6 +108,9 @@
     .navbar-toggle .icon-bar {
         background-color: #0554a1;
     }
+    .navbar-toggle .white-bar {
+        background-color: white;
+    }
     header {
         padding-top: 15px;
         padding-bottom: 15px;

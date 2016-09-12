@@ -666,7 +666,7 @@ header {
 }
 
 .navbar-brand {
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/logo.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     margin: 8px 0 0 0;
 }
@@ -702,12 +702,12 @@ header {
 }
 
 .phone-icon {
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-phone.svg");
+    background-image: url("../images/svg/icon-phone.svg");
     font-size: 13px;
 }
 
 .chat-icon {
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-chat.svg");
+    background-image: url("../images/svg/icon-chat.svg");
     font-size: 15px;
 }
 
@@ -763,7 +763,7 @@ header {
 .hero-section {
     height: calc(100vh - 80px);
     width: 100%;
-    background: url("http://dev.timeless.co/image-path/fundsindia/bg-hero-banner.jpg");
+    background: url("../images/bg-hero-banner.jpg");
     background-size: cover;
 }
 
@@ -866,8 +866,8 @@ header {
     color: #32754f;
     font-weight: 400;
     text-align: center;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
     line-height: 1.8;
 }
 
@@ -1026,7 +1026,7 @@ header {
 .mutual-funds {
     width: 100%;
     height: 100vh;
-    background: url("http://dev.timeless.co/image-path/fundsindia/bg-mutual.jpg");
+    background: url("../images/bg-mutual.jpg");
     background-size: cover;
     position: relative;
 }
@@ -1181,7 +1181,7 @@ header {
 /*getting-rich*/
 
 .getting-rich {
-    background: url("http://dev.timeless.co/image-path/fundsindia/bg-pattern.png") #3199ff;
+    background: url("../images/bg-pattern.png") #3199ff;
 }
 
 .getting-rich p,
@@ -1222,7 +1222,7 @@ header {
 }
 
 .testimonial {
-    background: url("http://dev.timeless.co/image-path/fundsindia/bg-testimonial.png") #28b380;
+    background: url("../images/bg-testimonial.png") #28b380;
     background-repeat: no-repeat;
     background-position: left bottom -45px;
 }
@@ -1280,7 +1280,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-quote.svg");
+    background-image: url("../images/svg/icon-quote.svg");
     width: 35px;
     height: 30px;
 }
@@ -1293,7 +1293,7 @@ header {
 }
 
 .faq {
-    background: url("http://dev.timeless.co/image-path/fundsindia/bg-faq.png") #366fe5;
+    background: url("../images/bg-faq.png") #366fe5;
     background-repeat: no-repeat;
     background-position: right bottom -65px;
 }
@@ -1318,7 +1318,7 @@ header {
     height: 15px;
     position: absolute;
     left: 0;
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-plus.svg");
+    background-image: url("../images/svg/icon-plus.svg");
     top: 2px;
 }
 
@@ -1564,7 +1564,7 @@ header {
 }
 
 .blog-overlay {
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/bg-blog.png");
+    background-image: url("../images/bg-blog.png");
     background-size: cover;
     opacity: .8;
 }
@@ -1659,8 +1659,20 @@ header {
     letter-spacing: .03em;
 }
 
+.category-menu {
+    background-color: #0554a1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 .category-menu ul {
-    margin-bottom: 0;
+    margin: 0;
+}
+
+.category-menu ul a {
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
 
@@ -1674,7 +1686,7 @@ header {
     color: #376092;
     font-size: 14px;
     padding-left: 25px;
-    background-image: url("http://dev.timeless.co/image-path/fundsindia/svg/icon-plus-blue.svg");
+    background-image: url("../images/svg/icon-plus-blue.svg");
     background-repeat: no-repeat;
     background-position: left center;
 }
