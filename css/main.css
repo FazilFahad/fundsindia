@@ -616,6 +616,11 @@ ul.list-style li {
     padding-bottom: 3rem;
 }
 
+.padding-xtra {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 
 /*Header*/
 
@@ -1673,6 +1678,155 @@ header {
     color: white;
     font-size: 11px;
     text-transform: uppercase;
+}
+
+
+/*blog-feature*/
+
+.blog-feature a {
+    position: relative;
+    width: calc(100% / 3);
+}
+
+.flex-feature {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-feature figcaption {
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+    left: 15px;
+    right: 15px;
+}
+
+.blog-feature h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.small-text {
+    color: #17c988;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+
+/*left-right-bar*/
+
+.blog-left-right-bar {
+    padding-top: 4rem;
+}
+
+.blog-left-right-bar h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*left-side*/
+
+.blog-left-side {}
+
+.article-row {
+    max-width: 350px;
+    background-color: white;
+    border: 1px solid #dedede;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.flex-article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.article-row figcaption {
+    padding: 20px;
+}
+
+.article-row h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.article-row h3 > a {
+    color: #0554a1;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.article-row p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.blog-continue-reading {
+    color: #666;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
+.icon-chat {
+    fill: #999;
+    fill-rule: evenodd;
+}
+
+.chat-count {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.chat-count {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #dedede;
+    color: #666;
+    font-size: 14px;
+}
+
+.chat-count svg {
+    margin-top: -2px;
+    margin-right: 2px;
+}
+
+
+/*knowledge-base*/
+
+.knowledge-base {
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #c4d5e2;
+    border-radius: 5px;
+}
+
+.knowledge-base h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.knowledge-base h4 {
+    color: #0554a1;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 30px;
 }
 
 
