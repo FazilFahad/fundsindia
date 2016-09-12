@@ -117,39 +117,39 @@ $(document).ready(function() {
 
     function swiperControl() {
         var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 4,
-        simulateTouch: false,
-        loop: true,
-        spaceBetween: 20,
-        autoplay:3000,
-        breakpoints: {
-            1366: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            },
-            1199: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            991: {
-                slidesPerView: 2,
-                spaceBetween: 15
-            },
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            580: {
-                slidesPerView: 1,
-                spaceBetween: 5
+            slidesPerView: 4,
+            simulateTouch: false,
+            loop: true,
+            spaceBetween: 20,
+            autoplay: 3000,
+            breakpoints: {
+                1366: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1199: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                991: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                580: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                }
             }
-        }
-    });
+        });
     }
 
     swiperControl();
 
-        function doAnimate() {
+    function doAnimate() {
         var doAnimations = function() {
             var offset = $(window).scrollTop() + $(window).height(),
                 $animatables = $('.animatable');
@@ -173,10 +173,42 @@ $(document).ready(function() {
         jQuery('.smooth-scroll').scrollingTo();
     }());
 
-    function naturalFromControl() {
-        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    function tabEffectsContrl() {
+        tabSlide();
+
+        $('.nav-tabs li').on('shown.bs.tab', function() {
+            $('#magic-line').remove();
+            tabSlide();
+        });
+
+        function tabSlide() {
+            $("#tabControl").append("<li id='magic-line'></li>");
+            var $magicLine = $("#magic-line");
+            $magicLine
+                .width($(".active").width())
+                .css("left", $(".active a").position().left)
+                .data("origLeft", $magicLine.position().left)
+                .data("origWidth", $magicLine.width());
+            $("#tabControl li").find("a").hover(function() {
+                $el = $(this);
+                leftPos = $el.position().left;
+                newWidth = $el.parent().width();
+                $magicLine.stop().animate({
+                    left: leftPos,
+                    width: newWidth
+                });
+            }, function() {
+                $magicLine.stop().animate({
+                    left: $magicLine.data("origLeft"),
+                    width: $magicLine.data("origWidth")
+                });
+            });
+
+        }
     }
-    naturalFromControl();
+    tabEffectsContrl();
+
+
 
 
     // resize

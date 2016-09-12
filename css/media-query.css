@@ -147,6 +147,9 @@
     .work-flow > span::before {
         width: 262px;
     }
+    .article-row {
+        max-width: 285px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -192,6 +195,26 @@
         width: 0;
         height: 0;
         display: none;
+    }
+    .blog-feature a {
+        width: auto;
+    }
+    .blog-feature a {
+        max-width: 345px;
+    }
+    .flex-feature {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blog-feature a:last-child {
+        border-radius: 5px;
+    }
+    .blog-feature a:nth-child(2) {
+        border-radius: 0 5px 5px 0;
+    }
+    .article-row {
+        max-width: 330px;
     }
 }
 
@@ -313,6 +336,15 @@
         color: #0554a1;
         display: inline;
     }
+    .flex-article {
+        justify-content: space-around;
+    }
+    .blog-feature a {
+        max-width: 360px;
+    }
+    .article-row {
+    max-width: 48%;
+}
 }
 
 @media (max-width: 580px) {
@@ -355,7 +387,8 @@
     .normal-form fieldset {
         width: 100%;
     }
-    .normal-form .btn-primary, .natural-form .nl-form button.btn-primary {
+    .normal-form .btn-primary,
+    .natural-form .nl-form button.btn-primary {
         font-size: 16px;
         padding: 10px 20px;
         display: table;
@@ -403,4 +436,7 @@
     .testimonial-person figcaption {
         margin-top: 15px;
     }
+        .article-row {
+    max-width: 350px;
+}
 }

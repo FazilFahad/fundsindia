@@ -1,0 +1,3 @@
+[Mon Sep 12 2016 15:00:35 GMT+0530 (IST)] layer "© 2016 FundsIndia.com": Unsupported extension: com
+[Mon Sep 12 2016 15:00:35 GMT+0530 (IST)] layer "17952959.cms": Unsupported extension: cms
+[Mon Sep 12 2016 15:00:35 GMT+0530 (IST)] layer "Official blog of FundsIndia.com Fundsindia Knowledge Center": Expected end of input but "F" found.
