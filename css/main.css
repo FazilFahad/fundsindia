@@ -1482,6 +1482,10 @@ header {
     margin-top: 35px;
 }
 
+.footer-space {
+    margin-top: 4.5rem;
+}
+
 .footer-top ul {
     margin-top: 25px;
     margin-bottom: 0;
