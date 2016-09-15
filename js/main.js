@@ -209,6 +209,17 @@ $(document).ready(function() {
     tabEffectsContrl();
 
 
+    function categoryControl() {
+        var selectedCategory = $("#categoryCollapse .active").text();
+        $(".category-selected").text(" ").append(selectedCategory);
+        console.log("selectedCategory::" + selectedCategory);
+    }
+    // categoryControl();
+
+    function okayControl() {
+        var navigation = $('#categoryMenuControl').okayNav();
+    }
+    okayControl();
 
 
     // resize

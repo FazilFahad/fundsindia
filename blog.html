@@ -70,49 +70,29 @@
         <span>#investingsedosti</span>
     </section>
     <section class="category-menu">
-        <div class="container padding-xtra">
+        <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar white-bar top-bar"></span>
-                    <span class="icon-bar white-bar middle-bar"></span>
-                    <span class="icon-bar white-bar bottom-bar"></span>
+                <span class="category-selected">Home</span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="42.469" height="74.469" viewBox="0 0 42.469 74.469" class="category-right-arrow">
+                        <path d="M40.941,41.181 L8.887,73.415 C6.848,75.466 3.543,75.466 1.505,73.415 C-0.533,71.366 -0.533,68.041 1.505,65.992 L29.867,37.470 L1.506,8.949 C-0.532,6.899 -0.532,3.575 1.506,1.525 C3.544,-0.526 6.849,-0.526 8.888,1.525 L40.942,33.759 C41.961,34.784 42.470,36.127 42.470,37.470 C42.470,38.814 41.959,40.157 40.941,41.181 Z" class="category-arrow" />
+                    </svg>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav list-inline">
-                    <li>
-                        <a href="">Mutual funds</a>
-                    </li>
-                    <li>
-                        <a href="">Features</a>
-                    </li>
-                    <li>
-                        <a href="">Equities</a>
-                    </li>
-                    <li>
-                        <a href="">Insurance</a>
-                    </li>
-                    <li>
-                        <a href="">Recommendations</a>
-                    </li>
-                    <li>
-                        <a href="">General</a>
-                    </li>
-                    <li>
-                        <a href="">Advisory</a>
-                    </li>
-                    <li>
-                        <a href="">Personal finance</a>
-                    </li>
-                    <li>
-                        <a href="">Data</a>
-                    </li>
-                    <li>
-                        <a href="">Simply Important</a>
-                    </li>
+            <nav role="navigation" id="categoryMenuControl" class="okayNav category-menu">
+                <ul>
+                    <li><a href="#">Mutual funds</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Equities</a></li>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">Recommendations</a></li>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Advisory</a></li>
+                    <li><a href="#">Personal finance</a></li>
+                    <li><a href="#">Data</a></li>
+                    <li><a href="#">Simply Important</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </section>
     <section class="blog-feature">
@@ -149,9 +129,28 @@
             </a>
         </div>
     </section>
+    <section class="customer-corner">
+        <div class="container padding-xtra">
+            <div class="customer-corner-block">
+                <div class="corner-bg">
+                    <img src="images/corner-logo.png" alt="corner-logo" class="img-responsive"> Consumer Corner
+                </div>
+                <div class="category-list">
+                    <div class="small-list">
+                        <a href="">General</a>
+                        <a href="">Mutual funds</a>
+                        <a href="">Simply Important</a>
+                    </div>
+                    <h2>
+                        <a href="">FundsIndia Explains: Active Vs. passive management of funds</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="blog-left-right-bar">
         <div class="container">
-            <h2>Recent  Articles</h2>
+            <h2>Recent Articles</h2>
             <div class="col-xs-12 col-md-8 blog-left-side">
                 <div class="flex-article">
                     <figure class="article-row">
@@ -409,7 +408,7 @@
         </div>
     </section>
     <footer>
-        <section class="footer-top">
+        <section class="footer-top footer-space">
             <div class="container">
                 <div class="col-xs-12 col-md-6 col-lg-5 col-one">
                     <figure>
@@ -512,6 +511,7 @@
     <!--headroom.min.js for responsive script-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js"></script>
     <!--main.js for custom script-->
     <script src="js/nlform.js"></script>
     <script src="js/main.js"></script>
