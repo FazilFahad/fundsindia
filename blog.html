@@ -63,7 +63,7 @@
         </nav>
     </header>
     <section class="head-top blog-hero">
-        <div class="blog-page-title">
+        <div class="blog-page-title info-title">
             <p>Official blog of FundsIndia.com</p>
             <h2>Fundsindia Knowledge Center</h2>
         </div>
@@ -510,6 +510,44 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js"></script>
     <!--main.js for custom script-->
     <script src="js/nlform.js"></script>
+    <script>
+        function tabEffectsContrl() {
+        tabSlide();
+        $('.nav-tabs li').on('shown.bs.tab', function() {
+            $('#magic-line').remove();
+            tabSlide();
+        });
+
+        function tabSlide() {
+            $("#tabControl").append("<li id='magic-line'></li>");
+            var $magicLine = $("#magic-line");
+            $magicLine
+                .width($(".active").width())
+                .css("left", $(".active a").position().left)
+                .data("origLeft", $magicLine.position().left)
+                .data("origWidth", $magicLine.width());
+            $("#tabControl li").find("a").hover(function() {
+                $el = $(this);
+                leftPos = $el.position().left;
+                newWidth = $el.parent().width();
+                $magicLine.stop().animate({
+                    left: leftPos,
+                    width: newWidth
+                });
+            }, function() {
+                $magicLine.stop().animate({
+                    left: $magicLine.data("origLeft"),
+                    width: $magicLine.data("origWidth")
+                });
+            });
+        }
+    }
+    tabEffectsContrl();
+    function okayControl() {
+        var navigation = $('#categoryMenuControl').okayNav();
+    }
+    okayControl();
+    </script>
     <script src="js/main.js"></script>
 </body>
 
